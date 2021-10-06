@@ -1,7 +1,5 @@
 import math
-
 import numpy as np
-
 from scipy.special import legendre
 
 def pol2cart(phi, rho):
@@ -112,12 +110,6 @@ def get_H(chanlocs, order=10, smooth=4):
     H = H + H.T 
     H = H - (np.identity(n_elecs) * (H[0,0]/2))
     return H
-
-def get_C(d_matrix, Gsinv_matrix):
-    '''
-    
-    '''
-
 
 def surface_laplacian(data, Gs_matrix, Gsinv_matrix, H_matrix):
     '''
